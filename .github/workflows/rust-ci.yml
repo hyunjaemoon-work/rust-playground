@@ -5,12 +5,12 @@ on:
   pull_request:
 
 jobs:
-  - name: Check
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Setup Rust environment
-        uses: actions/setup-rust@v1
+        uses: actions/setup-rust@v3
       - name: Run cargo check
         run: cargo check
